@@ -30,7 +30,6 @@ module.exports.Signup = async (req, res, next) => {
 module.exports.Login = async (req, res, next) => {
     try {
         const { email, password } = req.body;
-        console.log(req.body)
         if(!email || !password ){
             return res.json({message:'All fields are required'})
         }
