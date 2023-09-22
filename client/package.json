@@ -3,14 +3,36 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@reduxjs/toolkit": "^1.8.1",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "@types/jest": "^27.5.2",
+    "@types/node": "^16.18.53",
+    "@types/react": "^18.2.22",
+    "@types/react-dom": "^18.2.7",
+    "@typescript-eslint/eslint-plugin": "^6.7.2",
+    "@typescript-eslint/parser": "^6.7.2",
+    "antd": "^4.21.6",
+    "axios": "^0.26.1",
+    "currency.js": "^2.0.4",
+    "eslint": "^8.13.0",
+    "i18next": "^21.6.16",
+    "moment": "^2.29.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-i18next": "^11.16.7",
+    "react-redux": "^7.2.3",
+    "react-router-dom": "^6.3.0",
     "react-scripts": "5.0.1",
+    "redux-persist": "^6.0.0",
+    "sass": "^1.50.1",
+    "typescript": "^4.9.5",
     "web-vitals": "^2.1.4",
-    "eslint-plugin-prettier": "^4.0.0"
+    "yup": "^0.32.11"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -20,19 +42,15 @@
     "format": "prettier --write \"src/**/*.{ts,js,jsx,css,html,scss}\"",
     "lint": "eslint \"{src,apps,libs,test}/**/*.{ts,js,jsx,css,html,scss}\" --fix"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
   "devDependencies": {
+    "@babel/eslint-parser": "^7.22.15",
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "eslint": "^8.13.0",
     "eslint-config-airbnb": "^19.0.4",
-    "eslint-config-prettier": "^8.5.0",
+    "eslint-config-prettier": "^8.10.0",
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-prettier": "^5.0.0",
     "eslint-plugin-react": "^7.29.4",
     "eslint-plugin-react-hooks": "^4.4.0",
     "prettier": "2.6.2"
