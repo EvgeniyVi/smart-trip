@@ -1,4 +1,5 @@
 {
+
   "parserOptions": {
     "sourceType": "module",
     "ecmaFeatures": {
@@ -22,17 +23,35 @@
     "browser": true,
     "es2021": true
   },
-
+  "parser": "@typescript-eslint/parser",
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+      }
+    }
+  },
   "rules": {
     "react-hooks/exhaustive-deps": 0,
     "no-console": "off",
     "no-debugger": "off",
     "quotes": "off",
+
     "no-multiple-empty-lines": [
       "warn",
       {
         "max": 1,
         "maxBOF": 1
+      }
+    ],
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "js": "never",
+        "jsx": "never",
+        "ts": "never",
+        "tsx": "never"
       }
     ],
     "import/no-extraneous-dependencies": "off",
