@@ -1,3 +1,3 @@
-import { UserOutlined } from '@ant-design/icons'
+import { UserOutlined, GlobalOutlined, SearchOutlined } from '@ant-design/icons'
 
-export { UserOutlined }
+export { UserOutlined, GlobalOutlined, SearchOutlined }

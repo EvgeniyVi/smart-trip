@@ -1,0 +1,121 @@
+@import '../../../../../variables';
+.wrapper_body{
+  height:25vh;
+  display: flex;
+  justify-content: space-between;
+  width: 98%;
+  padding-bottom: 15px;
+}
+
+
+@mixin slider_block{
+  background: $white;
+  border-top-right-radius: 75px;
+  border-bottom-right-radius: 75px;
+}
+
+@mixin navigate_block{
+  background: $white;
+  border-top-left-radius: 75px;
+  border-bottom-left-radius: 75px;
+}
+
+ .main_slider_block {
+  @include slider_block;
+  height: 100%;
+  width: 450px;
+  display: flex;
+  align-items: center;
+}
+
+ .children_slider_block{
+   @include slider_block;
+   width: 430px;
+   height: 90%;
+   border: 1px solid $cadetblue;
+ }
+
+ .body_navigate_block{
+   @include navigate_block;
+   height: 40%;
+   width: 450px;
+   display: flex;
+   justify-content: flex-end;
+   align-items: center;
+ }
+
+.children_navigate_block{
+  @include navigate_block;
+  width: 430px;
+  height: 90%;
+  border: 1px solid $cadetblue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+ .information_travel_block{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+ }
+
+ .information_travel_block_header{
+   font-size: 20px;
+ }
+.information_travel_block_content{
+  font-size: 30px;
+}
+.body_navigate{
+  height: 59vh;
+  display: flex;
+  justify-content: space-between;
+}
+.body_navigate_left_block_wrapper{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.body_navigate_left_block{
+  width: 95%;
+  display:flex;
+  flex-direction: column;
+}
+@mixin body_navigate_left_block_card{
+  background: white;
+  border-radius: 75px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin children_left_block{
+  @include body_navigate_left_block_card;
+  height: 90%;
+  width: 95%;
+
+}
+
+.children_left_block_top{
+  @include children_left_block;
+  background-image: url("../../../../../media/top_conatiner_background.jpg");
+  background-repeat:no-repeat;
+  background-position: center center;
+}
+.children_left_block_bottom{
+  @include children_left_block;
+  background-image: url("../../../../../media/bottom_container_background.jpg");
+}
+
+.body_navigate_left_block_card_top{
+  margin-bottom: auto;
+  height: 40%;
+  @include body_navigate_left_block_card
+}
+.body_navigate_left_block_card_bottom{
+  height: 40%;
+  @include body_navigate_left_block_card
+}
+
+
