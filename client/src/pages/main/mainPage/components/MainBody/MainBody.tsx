@@ -1,5 +1,4 @@
 import './style.scss'
-import { Divider } from 'antd'
 import { ButtonDefault } from '../../../../../components/button/inxed'
 
 function MainBody() {
@@ -32,18 +31,10 @@ function MainBody() {
           </div>
         </div>
 
-        <div
-          style={{
-            display: 'flex',
-            flexDirection: 'column',
-          }}
-        >
-          <div className="body_navigate_block" style={{ marginBottom: 'auto' }}>
+        <div className="body_navigate_block_wrapper">
+          <div className="body_navigate_block_top">
             <div className="children_navigate_block">
               <span>Travel</span>
-              <span>
-                <Divider />
-              </span>
               <ButtonDefault
                 disabled={false}
                 className=""
@@ -53,7 +44,7 @@ function MainBody() {
               />
             </div>
           </div>
-          <div className="body_navigate_block">
+          <div className="body_navigate_block_bottom">
             <div className="children_navigate_block">
               <span>Recomened</span>
               <span>Recomened</span>

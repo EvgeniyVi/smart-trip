@@ -35,7 +35,7 @@
    border: 1px solid $cadetblue;
  }
 
- .body_navigate_block{
+ @mixin body_navigate_block{
    @include navigate_block;
    height: 40%;
    width: 450px;
@@ -43,6 +43,15 @@
    justify-content: flex-end;
    align-items: center;
  }
+ .body_navigate_block_top{
+   @include body_navigate_block;
+   margin-bottom: auto;
+ }
+.body_navigate_block_bottom{
+  @include body_navigate_block;
+
+}
+
 
 .children_navigate_block{
   @include navigate_block;
@@ -117,5 +126,8 @@
   height: 40%;
   @include body_navigate_left_block_card
 }
-
+.body_navigate_block_wrapper{
+  display: flex;
+  flex-direction: column;
+}
 
