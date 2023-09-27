@@ -1,0 +1,14 @@
+.slide-enter {
+  transform: translateX(-25%);
+}
+.slide-enter-active {
+  transform: translateX(0%);
+  transition: transform 500ms ease-in-out;
+}
+.slide-exit {
+  transform: translate(100%, 0%);
+}
+.slide-exit-active {
+  transform: translate(-100%, -100%);
+  transition: transform 500ms ease-in-out;
+}

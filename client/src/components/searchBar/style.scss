@@ -1,0 +1,35 @@
+@import '../../variables';
+
+.search_box {
+  transform:  translate(-50%,);
+  height: 40px;
+  border-radius: 40px;
+}
+
+.search_box:hover > .search_input {
+  width: 150px;
+  border-bottom: 1px solid $white;
+}
+
+.search_box:hover > .search_button {
+  color : $black;
+}
+
+.search_button {
+  color: $black;
+  font-size: $iconSize;
+  border-radius: 50%;
+  transition: 0.4s;
+}
+
+.search_input {
+  border:none;
+  background: none;
+  outline:none;
+  color: $white;
+  font-size: $inputSize;
+  transition: 0.4s;
+  width: 0;
+}
+
+
