@@ -48,7 +48,7 @@ function MainBody() {
           </div>
           <div className="body_navigate_block_bottom">
             <div className="children_navigate_block">
-              <span>Recomened</span>
+              <span>{t('Recomended')}</span>
               <ButtonDefault
                 disabled={false}
                 className=""
