@@ -1,25 +1,12 @@
-import { useTranslation } from 'react-i18next'
-import { Button, Select } from 'antd'
-import { useLocation, useNavigate } from 'react-router-dom'
+import { Button } from 'antd'
 import React from 'react'
 import useCommon from '../services/commonService'
 import { en, ua } from '../constants'
-import { useTypedSelector } from '../redux/useTypeSelector'
 import ImageComponent from './ImageComponent'
 import Ukraine from '../media/Ukraine.png'
 import England from '../media/England.png'
 
-const { Option } = Select
-
-interface handleChange {
-  value: string
-}
 function LanguageMenu({ style = null, ...props }) {
-  const { t } = useTranslation()
-  const navigate = useNavigate()
-  const location = useLocation()
-
-  const language = useTypedSelector((state) => state.common.language)
   const { changeLanguage } = useCommon()
 
   const handleChange = (value: string) => {
