@@ -6,8 +6,9 @@
   border-radius: 40px;
 }
 
-.search_box:hover > .search_input {
+.search_box:hover > .search_input.ant-input {
   width: 150px;
+  border: none;
   border-bottom: 1px solid $white;
 }
 
@@ -22,7 +23,7 @@
   transition: 0.4s;
 }
 
-.search_input {
+.search_input.ant-input {
   border:none;
   background: none;
   outline:none;

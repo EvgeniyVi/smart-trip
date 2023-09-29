@@ -1,4 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit'
+import storage from 'redux-persist/lib/storage'
+import { persistReducer } from 'redux-persist'
 import { getLanguage } from '../../utils/helpers'
 
 const initialState = {
@@ -15,5 +17,10 @@ const commonSlice = createSlice({
   },
 })
 
+const persistConfig = {
+  key: 'common',
+  storage,
+  whitelist: ['language'],
+}
 export const { setLanguage } = commonSlice.actions
-export default commonSlice.reducer
+export default persistReducer(persistConfig, commonSlice.reducer)

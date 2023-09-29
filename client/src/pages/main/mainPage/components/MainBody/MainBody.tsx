@@ -1,7 +1,9 @@
 import './style.scss'
+import { useTranslation } from 'react-i18next'
 import { ButtonDefault } from '../../../../../components/button/inxed'
 
 function MainBody() {
+  const { t } = useTranslation()
   return (
     <div>
       <div className="wrapper_body">
@@ -12,10 +14,10 @@ function MainBody() {
         </div>
         <div className="information_travel_block">
           <span className="information_travel_block_header">
-            Its time to travel
+            {t('Its time to travel')}
           </span>
           <span className="information_travel_block_content">
-            Plan your next Tropical Holidays
+            {t('Plan your next Tropical Holidays')}
           </span>
         </div>
       </div>
@@ -34,7 +36,7 @@ function MainBody() {
         <div className="body_navigate_block_wrapper">
           <div className="body_navigate_block_top">
             <div className="children_navigate_block">
-              <span>Travel</span>
+              <span>{t('Travel')}</span>
               <ButtonDefault
                 disabled={false}
                 className=""
@@ -46,7 +48,6 @@ function MainBody() {
           </div>
           <div className="body_navigate_block_bottom">
             <div className="children_navigate_block">
-              <span>Recomened</span>
               <span>Recomened</span>
               <ButtonDefault
                 disabled={false}

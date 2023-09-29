@@ -1,38 +1,62 @@
 import { useTranslation } from 'react-i18next'
-
-import { useSelector } from 'react-redux'
-import { Select } from 'antd'
+import { Button, Select } from 'antd'
 import { useLocation, useNavigate } from 'react-router-dom'
+import React from 'react'
 import useCommon from '../services/commonService'
-import { en, ru, ua } from '../constants'
+import { en, ua } from '../constants'
+import { useTypedSelector } from '../redux/useTypeSelector'
+import ImageComponent from './ImageComponent'
+import Ukraine from '../media/Ukraine.png'
+import England from '../media/England.png'
 
 const { Option } = Select
 
+interface handleChange {
+  value: string
+}
 function LanguageMenu({ style = null, ...props }) {
   const { t } = useTranslation()
   const navigate = useNavigate()
   const location = useLocation()
 
-  // const language = useSelector((state) => state.common.language)
+  const language = useTypedSelector((state) => state.common.language)
   const { changeLanguage } = useCommon()
 
-  // @ts-ignore
-  const handleChange = (event) => {
-    changeLanguage(event)
+  const handleChange = (value: string) => {
+    changeLanguage(value)
   }
 
   return (
-    <Select
-      // value={language}
-      value="language"
-      {...props}
-      onChange={(e) => handleChange(e)}
-      onClick={(e) => e.stopPropagation()}
+    <div
+      style={{
+        display: 'flex',
+        justifyContent: 'space-between',
+        width: '100px',
+      }}
     >
-      <Option value={ua}>{t('Ukrainian')}</Option>
-      <Option value={ru}>{t('Russian')}</Option>
-      <Option value={en}>{t('English')}</Option>
-    </Select>
+      <span>
+        <Button type="text" onClick={() => handleChange('ua')}>
+          <ImageComponent
+            src={Ukraine}
+            width={20}
+            height={20}
+            preview={false}
+          />
+        </Button>
+      </span>
+
+      <span>
+        <Button type="text" onClick={() => handleChange('en')}>
+          {' '}
+          <ImageComponent
+            src={England}
+            width={20}
+            height={20}
+            preview={false}
+          />
+        </Button>
+      </span>
+    </div>
   )
 }
 

@@ -2,15 +2,24 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import './index.css'
 import { BrowserRouter } from 'react-router-dom'
+import { Provider } from 'react-redux'
 import App from './App'
+import 'antd/dist/antd.min.css'
 import reportWebVitals from './reportWebVitals'
+import { store } from './redux/store'
+import LanguageProvider from './providers/LanguageProvider'
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement)
 
+// @ts-ignore
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-      <App />
+      <Provider store={store}>
+        <LanguageProvider>
+          <App />
+        </LanguageProvider>
+      </Provider>
     </BrowserRouter>
   </React.StrictMode>
 )

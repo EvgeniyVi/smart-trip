@@ -3,7 +3,6 @@ import { initReactI18next } from 'react-i18next'
 
 import localeEn from './locales/en.json'
 import localeUa from './locales/ua.json'
-import localeRu from './locales/ru.json'
 
 const resources = {
   en: {
@@ -12,20 +11,14 @@ const resources = {
   ua: {
     translation: { ...localeUa },
   },
-  ru: {
-    translation: { ...localeRu },
-  },
 }
 
 i18n.use(initReactI18next).init({
   resources,
-  preload: ['ua'],
+  lng: 'ua',
   fallbackLng: 'ua',
   interpolation: {
     escapeValue: false,
-  },
-  detection: {
-    order: ['path', 'localStorage'],
   },
 })
 

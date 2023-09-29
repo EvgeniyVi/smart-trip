@@ -1,6 +1,11 @@
-import { en, ru, ua } from '../constants'
+import { en, ua } from '../constants'
+import {
+  englishLanguage,
+  ukraineLanguage,
+} from '../locales/localeAntdComponent'
 
 export const getNavigatorLanguage = () => {
+  console.log(navigator)
   if (navigator.languages && navigator.languages.length) {
     return navigator.languages[0]
   }
@@ -12,8 +17,18 @@ export const getLanguage = () => {
   if (navigatorLanguage.includes(en)) {
     return en
   }
-  if (navigatorLanguage.includes(ru)) {
-    return ru
-  }
   return ua
+}
+
+export const localizationAntdComponent = (language: string) => {
+  switch (language) {
+    case 'ua':
+      return ukraineLanguage
+
+    case 'en':
+      return englishLanguage
+
+    default:
+      return null
+  }
 }
