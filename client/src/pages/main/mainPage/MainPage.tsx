@@ -1,5 +1,5 @@
 import './style.scss'
-import { Layout, Space } from 'antd'
+import { Space } from 'antd'
 
 import React from 'react'
 
@@ -10,10 +10,10 @@ function MainPage() {
   return (
     <div className="wrapper_auth_page">
       <Space direction="vertical" style={{ width: '100%' }} size={[0, 48]}>
-        <Layout>
+        <div>
           <MainHeader />
           <MainBody />
-        </Layout>
+        </div>
       </Space>
     </div>
   )

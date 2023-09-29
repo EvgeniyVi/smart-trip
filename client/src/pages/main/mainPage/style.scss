@@ -35,5 +35,9 @@
     color:$black;
     font-size: $iconSize;
   }
+  &.wrapper{
+    display: flex;
+    justify-content: space-around;
+  }
 }
 

@@ -2,17 +2,11 @@ import { Header } from 'antd/es/layout/layout'
 import React from 'react'
 import { GlobalOutlined, UserOutlined } from '../../../../../components/icon'
 import SearchBar from '../../../../../components/searchBar/SearchBar'
-
-const headerStyle: React.CSSProperties = {
-  color: '#fff',
-  height: 64,
-  paddingInline: 50,
-  lineHeight: '64px',
-}
+import LanguageMenu from '../../../../../components/languageMenu/LanguageMenu'
 
 function MainHeader() {
   return (
-    <Header style={headerStyle}>
+    <Header style={{ background: 'unset' }}>
       <div className="header">
         <div className="demo-logo">
           <GlobalOutlined className="logo" />
@@ -21,8 +15,9 @@ function MainHeader() {
         <div>
           <SearchBar />
         </div>
-        <div>
+        <div className="right_menu wrapper">
           <UserOutlined className="right_menu user_icon" />
+          <LanguageMenu />
         </div>
       </div>
     </Header>
