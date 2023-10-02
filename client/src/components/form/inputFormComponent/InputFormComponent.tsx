@@ -1,6 +1,5 @@
 import { Form, Input } from 'antd'
 import './style.scss'
-import { useTransition } from 'react'
 import { useTranslation } from 'react-i18next'
 
 type InputFormProps = {

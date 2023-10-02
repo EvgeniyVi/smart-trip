@@ -1,4 +1,4 @@
-import React, { FC, useState } from 'react'
+import React, { useState } from 'react'
 import { Modal } from 'antd'
 import { ButtonDefault } from '../components/button/inxed'
 

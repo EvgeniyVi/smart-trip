@@ -1,8 +1,6 @@
 import { Form, Input } from 'antd'
 import './style.scss'
-import { useTransition } from 'react'
 import { useTranslation } from 'react-i18next'
-import { EyeInvisibleOutlined, EyeTwoTone } from '../../icon'
 
 type InputFormProps = {
   name: string

@@ -1,7 +1,7 @@
 import { Header } from 'antd/es/layout/layout'
-import React from 'react'
+
 import { useTranslation } from 'react-i18next'
-import { GlobalOutlined, UserOutlined } from '../../../../../components/icon'
+import { GlobalOutlined } from '../../../../../components/icon'
 import SearchBar from '../../../../../components/searchBar/SearchBar'
 import LanguageMenu from '../../../../../components/languageMenu/LanguageMenu'
 import withModal from '../../../../../HOCs/withModal'
