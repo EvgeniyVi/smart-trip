@@ -1,5 +1,6 @@
 import { Button } from 'antd'
 import React, { ReactNode } from 'react'
+import { useTranslation } from 'react-i18next'
 
 type ButtonDefaultProps = {
   disabled: boolean
@@ -15,10 +16,11 @@ function ButtonDefault({
   icon,
   text,
 }: ButtonDefaultProps) {
+  const { t } = useTranslation()
   return (
     <Button key={2} disabled={disabled} onClick={onClick} className={className}>
       {icon}
-      {text}
+      {t(text)}
     </Button>
   )
 }

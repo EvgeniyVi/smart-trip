@@ -1,5 +1,6 @@
 import { Header } from 'antd/es/layout/layout'
 import React from 'react'
+import { useTranslation } from 'react-i18next'
 import { GlobalOutlined, UserOutlined } from '../../../../../components/icon'
 import SearchBar from '../../../../../components/searchBar/SearchBar'
 import LanguageMenu from '../../../../../components/languageMenu/LanguageMenu'
@@ -7,18 +8,13 @@ import withModal from '../../../../../HOCs/withModal'
 import Form from '../Form'
 
 function MainHeader() {
+  const { t } = useTranslation()
   const UserModal = withModal(Form, {
-    okButtonText: 'Add',
-    footer: 'null',
+    okButtonText: t('Sign in'),
     disabled: false,
-    title: 'Add record',
-    icon: <UserOutlined />,
+    title: t('Sign in'),
     className: '',
   })
-
-  const props = {
-    key: 1,
-  }
 
   return (
     <Header style={{ background: 'unset' }}>
@@ -31,9 +27,7 @@ function MainHeader() {
           <SearchBar />
         </div>
         <div className="right_menu wrapper">
-          <UserOutlined className="right_menu user_icon" />
           <UserModal header="hello" />
-
           <LanguageMenu />
         </div>
       </div>

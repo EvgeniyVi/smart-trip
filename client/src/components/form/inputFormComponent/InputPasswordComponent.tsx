@@ -2,6 +2,7 @@ import { Form, Input } from 'antd'
 import './style.scss'
 import { useTransition } from 'react'
 import { useTranslation } from 'react-i18next'
+import { EyeInvisibleOutlined, EyeTwoTone } from '../../icon'
 
 type InputFormProps = {
   name: string
@@ -11,13 +12,13 @@ type InputFormProps = {
   formClassName: string
   placeholder: string
 }
-function InputFormComponent({
+function InputPasswordFormComponent({
   name,
   rules = {},
   label,
   initialValue,
-  formClassName = 'antd_form',
   placeholder,
+  formClassName = 'antd_form',
 }: InputFormProps) {
   const { t } = useTranslation()
   return (
@@ -28,7 +29,7 @@ function InputFormComponent({
       className={formClassName}
       initialValue={initialValue}
     >
-      <Input
+      <Input.Password
         onClick={(e) => e.stopPropagation()}
         placeholder={t(placeholder)}
       />
@@ -36,4 +37,4 @@ function InputFormComponent({
   )
 }
 
-export default InputFormComponent
+export default InputPasswordFormComponent

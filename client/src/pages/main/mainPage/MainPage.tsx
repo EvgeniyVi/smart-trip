@@ -6,7 +6,7 @@ import React from 'react'
 import MainHeader from './components/MainHeader/MainHeader'
 import MainBody from './components/MainBody/MainBody'
 
-function MainPage() {
+function MainPage(): React.JSX.Element {
   return (
     <div className="wrapper_auth_page">
       <Space direction="vertical" style={{ width: '100%' }} size={[0, 48]}>

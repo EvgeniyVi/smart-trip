@@ -3,11 +3,12 @@ import { Modal } from 'antd'
 import { ButtonDefault } from '../components/button/inxed'
 
 interface withAntdModalProps {
-  okButtonText: string
-  footer: string
-  title: string
+  okButtonText?: string
+
+  footer?: string
+  title?: string
   disabled: boolean
-  icon: React.JSX.Element
+  icon?: React.JSX.Element
   className: string
 }
 
@@ -17,7 +18,14 @@ interface ComponentWithDialogProps {
 
 function withModal(
   Component: React.ComponentType<any>,
-  { okButtonText, footer, title, disabled, icon, className }: withAntdModalProps
+  {
+    okButtonText = '',
+    footer = '',
+    title,
+    disabled,
+    icon,
+    className,
+  }: withAntdModalProps
 ) {
   return function ComponentWithDialog(props: ComponentWithDialogProps) {
     const [visible, setVisible] = useState(false)
