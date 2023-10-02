@@ -16,13 +16,7 @@ function ButtonDefault({
   text,
 }: ButtonDefaultProps) {
   return (
-    <Button
-      // size="medium"
-      key={2}
-      disabled={disabled}
-      onClick={onClick}
-      className={className}
-    >
+    <Button key={2} disabled={disabled} onClick={onClick} className={className}>
       {icon}
       {text}
     </Button>
