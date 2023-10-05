@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import i18n from '../i18n'
-import { useTypedSelector } from '../redux/useTypeSelector'
+import { useAppSelector } from '../hooks/redux/reduxHooks'
 
 interface languageProviderProps {
   children: React.ReactElement
@@ -8,7 +8,7 @@ interface languageProviderProps {
 
 function LanguageProvider(props: languageProviderProps) {
   const { children } = props
-  const language = useTypedSelector((state) => state.common.language)
+  const language = useAppSelector((state) => state.common.language)
   useEffect(() => {
     i18n.changeLanguage(language)
   }, [language])

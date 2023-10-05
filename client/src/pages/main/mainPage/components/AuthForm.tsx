@@ -1,12 +1,26 @@
 import { useTranslation } from 'react-i18next'
+import { Form } from 'antd'
 import { InputFormComponent } from '../../../../components/form/inputFormComponent'
 import InputPasswordFormComponent from '../../../../components/form/inputFormComponent/InputPasswordComponent'
 import { ButtonDefault } from '../../../../components/button/inxed'
+import { useLoginUserMutation } from '../../../../redux/service/authApi'
 
-function Form() {
+interface Login {
+  email: string
+  password: string
+}
+
+function AuthForm() {
   const { t } = useTranslation()
+  const [form] = Form.useForm()
+  const [loginUser, { data, isLoading, isSuccess, error }] =
+    useLoginUserMutation()
+  console.log(data)
+  const login = (values: Login) => {
+    loginUser({ ...values })
+  }
   return (
-    <div>
+    <Form form={form} onFinish={login}>
       <InputFormComponent
         name="email"
         rules={[]}
@@ -29,12 +43,14 @@ function Form() {
         <ButtonDefault
           disabled={false}
           className=""
-          onClick={() => console.log('auth')}
+          loading={isLoading}
+          onClick={() => form.submit()}
           icon={null}
           text="Sign in"
         />
       </div>
-    </div>
+    </Form>
   )
 }
-export default Form
+
+export default AuthForm

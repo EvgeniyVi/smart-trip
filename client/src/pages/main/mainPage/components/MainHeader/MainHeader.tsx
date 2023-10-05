@@ -5,11 +5,11 @@ import { GlobalOutlined } from '../../../../../components/icon'
 import SearchBar from '../../../../../components/searchBar/SearchBar'
 import LanguageMenu from '../../../../../components/languageMenu/LanguageMenu'
 import withModal from '../../../../../HOCs/withModal'
-import Form from '../Form'
+import AuthForm from '../AuthForm'
 
 function MainHeader() {
   const { t } = useTranslation()
-  const UserModal = withModal(Form, {
+  const UserModal = withModal(AuthForm, {
     okButtonText: t('Sign in'),
     disabled: false,
     title: t('Sign in'),
