@@ -23,7 +23,6 @@ const persistedReducer = persistReducer(persistConfig, appReducer)
 
 export const rtkQueryErrorLogger: Middleware =
   (api: MiddlewareAPI) => (next) => (action) => {
-    console.log(action)
     // RTK Query uses `createAsyncThunk` from redux-toolkit under the hood, so we're able to utilize these matchers!
     if (action.payload !== undefined) {
       if (isRejectedWithValue(action)) {
@@ -32,15 +31,15 @@ export const rtkQueryErrorLogger: Middleware =
           message: '',
           description: action.payload.message,
           type: action.payload.type,
-        }).then(() => next(action))
+        })
       }
       if (isFulfilled(action)) {
-        return notify({
+        notify({
           duration: 0,
           message: '',
           description: action.payload.message,
           type: action.payload.type,
-        }).then(() => next(action))
+        })
       }
     } else {
       return next(action)
