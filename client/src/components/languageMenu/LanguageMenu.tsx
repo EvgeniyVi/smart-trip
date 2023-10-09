@@ -7,7 +7,7 @@ import Ukraine from '../../media/Ukraine.png'
 import England from '../../media/England.png'
 import './style.scss'
 
-function LanguageMenu() {
+const LanguageMenu = () => {
   const { changeLanguage } = useCommon()
 
   const buttonProps = {
