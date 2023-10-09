@@ -3,7 +3,7 @@ import { Input } from 'antd'
 import { useTranslation } from 'react-i18next'
 import { SearchOutlined } from '../icon'
 
-function SearchBar() {
+const SearchBar = () => {
   const { t } = useTranslation()
   return (
     <div className="search_box">

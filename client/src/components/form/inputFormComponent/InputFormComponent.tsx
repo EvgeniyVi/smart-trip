@@ -1,38 +1,33 @@
 import { Form, Input } from 'antd'
 import './style.scss'
+import { FC } from 'react'
 import { useTranslation } from 'react-i18next'
 
 type InputFormProps = {
   name: string
-  rules: {}
+  rules: object
   label: string
   initialValue: string
   formClassName: string
   placeholder: string
 }
-function InputFormComponent({
+const InputFormComponent: FC<InputFormProps> = ({
   name,
   rules = {},
   label,
   initialValue,
   formClassName = 'antd_form',
-  placeholder,
-}: InputFormProps) {
-  const { t } = useTranslation()
-  return (
-    <Form.Item
-      name={name}
-      rules={[rules]}
-      label={t(label)}
-      className={formClassName}
-      initialValue={initialValue}
-    >
-      <Input
-        onClick={(e) => e.stopPropagation()}
-        placeholder={t(placeholder)}
-      />
-    </Form.Item>
-  )
-}
+                                                    placeholder,
+}) => (
+  <Form.Item
+    name={name}
+    rules={[rules]}
+    label={label}
+    className={formClassName}
+    initialValue={initialValue}
+  >
+    <Input onClick={(e) => e.stopPropagation()} placeholder={placeholder} />
+  </Form.Item>
+)
 
 export default InputFormComponent

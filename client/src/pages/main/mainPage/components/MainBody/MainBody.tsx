@@ -2,7 +2,7 @@ import './style.scss'
 import { useTranslation } from 'react-i18next'
 import { ButtonDefault } from '../../../../../components/button/inxed'
 
-function MainBody() {
+const MainBody = () => {
   const { t } = useTranslation()
   return (
     <div>

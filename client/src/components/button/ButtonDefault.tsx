@@ -1,5 +1,6 @@
 import { Button } from 'antd'
-import React, { ReactNode } from 'react'
+import React, { FC, ReactNode } from 'react'
+import { SizeType } from 'antd/es/config-provider/SizeContext'
 import { useTranslation } from 'react-i18next'
 
 type ButtonDefaultProps = {
@@ -8,31 +9,31 @@ type ButtonDefaultProps = {
   onClick: React.MouseEventHandler<HTMLButtonElement>
   icon: ReactNode
   text: string
-  // eslint-disable-next-line react/require-default-props
+  size?: SizeType
   loading?: boolean
 }
 
-function ButtonDefault({
+const ButtonDefault: FC<ButtonDefaultProps> = ({
   disabled,
   className,
   onClick,
   icon,
   loading,
   text,
-}: ButtonDefaultProps) {
-  const { t } = useTranslation()
-  return (
-    <Button
-      key={2}
-      disabled={disabled}
-      onClick={onClick}
-      className={className}
-      loading={loading}
-    >
-      {icon}
-      {t(text)}
-    </Button>
-  )
-}
+  size = 'middle',
+  loading,
+}) => (
+  <Button
+    size={size}
+    key={2}
+    disabled={disabled}
+    loading={loading}
+    onClick={onClick}
+    className={className}
+  >
+    {icon}
+    {text}
+  </Button>
+)
 
 export default ButtonDefault
