@@ -1,5 +1,5 @@
 import { Image } from 'antd'
-import React from 'react'
+import React, { FC } from 'react'
 
 interface ImageComponentProps {
   src: string
@@ -8,8 +8,6 @@ interface ImageComponentProps {
   preview: boolean
 }
 
-function ImageComponent(props: ImageComponentProps) {
-  return <Image {...props} />
-}
+const ImageComponent: FC<ImageComponentProps> = (props) => <Image {...props} />
 
 export default ImageComponent
