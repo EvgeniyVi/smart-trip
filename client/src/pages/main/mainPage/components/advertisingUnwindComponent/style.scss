@@ -4,7 +4,7 @@
   display: flex;
   background: url('../../../../../media/Unwind.png');
   height: 500px;
-
+  position: inherit;
   &__info-assessment {
     display: flex;
     height: 500px;
@@ -24,6 +24,7 @@
     justify-content: space-between;
     padding-top: 34px;
   }
+
 }
 
 .unwind-main-header {

@@ -1,5 +1,6 @@
 import Header from './components/headerComponent/Header'
 import Unwind from './components/advertisingUnwindComponent/Unwind'
+import { SearchBar } from './components/searchBarComponent'
 
 const MainPage = () => (
   <>
@@ -7,7 +8,7 @@ const MainPage = () => (
 
     <Unwind />
 
-    {/* <SearchBar /> */}
+    <SearchBar />
   </>
 )
 export default MainPage
