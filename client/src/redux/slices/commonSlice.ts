@@ -4,7 +4,7 @@ import { persistReducer } from 'redux-persist'
 import { getLanguage } from '../../utils/helpers'
 
 const initialState = {
-  language: getLanguage(),
+  language: getLanguage() || 'en',
 }
 
 const commonSlice = createSlice({

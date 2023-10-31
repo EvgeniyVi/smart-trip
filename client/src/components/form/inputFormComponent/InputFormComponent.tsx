@@ -1,6 +1,7 @@
 import { Form, Input } from 'antd'
 import './style.scss'
 import { FC } from 'react'
+import { useTranslation } from 'react-i18next'
 
 type InputFormProps = {
   name: string
@@ -8,6 +9,7 @@ type InputFormProps = {
   label: string
   initialValue: string
   formClassName: string
+  placeholder: string
 }
 const InputFormComponent: FC<InputFormProps> = ({
   name,
@@ -15,6 +17,7 @@ const InputFormComponent: FC<InputFormProps> = ({
   label,
   initialValue,
   formClassName = 'antd_form',
+                                                    placeholder,
 }) => (
   <Form.Item
     name={name}
@@ -23,7 +26,7 @@ const InputFormComponent: FC<InputFormProps> = ({
     className={formClassName}
     initialValue={initialValue}
   >
-    <Input onClick={(e) => e.stopPropagation()} />
+    <Input onClick={(e) => e.stopPropagation()} placeholder={placeholder} />
   </Form.Item>
 )
 

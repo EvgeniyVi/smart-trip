@@ -1,6 +1,7 @@
 import { Button } from 'antd'
 import React, { FC, ReactNode } from 'react'
 import { SizeType } from 'antd/es/config-provider/SizeContext'
+import { useTranslation } from 'react-i18next'
 
 type ButtonDefaultProps = {
   disabled: boolean
@@ -17,21 +18,24 @@ const ButtonDefault: FC<ButtonDefaultProps> = ({
   className,
   onClick,
   icon,
+  loading,
   text,
   size = 'middle',
-  loading,
-}) => (
-  <Button
-    size={size}
-    key={2}
-    disabled={disabled}
-    loading={loading}
-    onClick={onClick}
-    className={className}
-  >
-    {icon}
-    {text}
-  </Button>
-)
+}) => {
+  const { t } = useTranslation()
+  return (
+    <Button
+      size={size}
+      key={2}
+      disabled={disabled}
+      loading={loading}
+      onClick={onClick}
+      className={className}
+    >
+      {icon}
+      {t(text)}
+    </Button>
+  )
+}
 
 export default ButtonDefault
