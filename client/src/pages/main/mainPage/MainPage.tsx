@@ -1,20 +1,13 @@
-import './style.scss'
-import { Space } from 'antd'
-
-import React from 'react'
-
-import MainHeader from './components/MainHeader/MainHeader'
-import MainBody from './components/MainBody/MainBody'
+import Header from './components/headerComponent/Header'
+import Unwind from './components/advertisingUnwindComponent/Unwind'
 
 const MainPage = () => (
-  <div className="wrapper_auth_page">
-    <Space direction="vertical" style={{ width: '100%' }} size={[0, 48]}>
-      <div>
-        <MainHeader />
-        <MainBody />
-      </div>
-    </Space>
-  </div>
-)
+  <>
+    <Header />
 
+    <Unwind />
+
+    {/* <SearchBar /> */}
+  </>
+)
 export default MainPage

@@ -1,11 +1,14 @@
 const User = require("../Models/UserModel");
 const { createSecretToken } = require("../util/PrivateToken");
 const bcrypt = require("bcryptjs");
+const { validationResult } = require("express-validator");
 
 module.exports.Signup = async (req, res, next) => {
   try {
+    const errors = validationResult(req);
     const { email, password, username, createdDate } = req.body;
     const existingUser = await User.findOne({ email });
+
     if (existingUser) {
       return res.json({ message: "User already exists" });
     }

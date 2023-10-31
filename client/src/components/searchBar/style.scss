@@ -18,7 +18,7 @@
 
 .search_button {
   color: $black;
-  font-size: $iconSize;
+  font-size: $icon-size;
   border-radius: 50%;
   transition: 0.4s;
 }
@@ -28,7 +28,7 @@
   background: none;
   outline:none;
   color: $white;
-  font-size: $inputSize;
+  font-size: $input-size;
   transition: 0.4s;
   width: 0;
 }

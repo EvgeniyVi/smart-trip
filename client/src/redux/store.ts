@@ -10,7 +10,6 @@ import storage from 'redux-persist/lib/storage'
 import { setupListeners } from '@reduxjs/toolkit/query'
 import { appReducer } from './RootReducer'
 import { authApi } from './service/authApi'
-import 'react-toastify/dist/ReactToastify.css'
 import notify from '../components/notify'
 
 const persistConfig = {

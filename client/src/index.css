@@ -13,6 +13,9 @@ code {
 }
 
 html, body {
+    min-height: 6015px; /* look here */
+}
 
-  min-height: 100vh; /* look here */
+li {
+    list-style: none;
 }

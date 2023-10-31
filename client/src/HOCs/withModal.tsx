@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
 import { Modal } from 'antd'
+import { useTranslation } from 'react-i18next'
 import { ButtonDefault } from '../components/button/inxed'
 
 interface withAntdModalProps {
   okButtonText?: string
-
   footer?: string
   title?: string
   disabled: boolean
@@ -21,13 +21,16 @@ function withModal(
   {
     okButtonText = '',
     footer = '',
-    title,
+    title = '',
     disabled,
     icon,
     className,
   }: withAntdModalProps
 ) {
+  // eslint-disable-next-line react/function-component-definition
   return function ComponentWithDialog(props: ComponentWithDialogProps) {
+    const { t } = useTranslation()
+
     const [visible, setVisible] = useState(false)
     const handleOpen = () => setVisible(true)
     const handleClose = () => setVisible(false)
@@ -37,13 +40,13 @@ function withModal(
           <ButtonDefault
             onClick={handleOpen}
             disabled={disabled}
-            text={okButtonText}
+            text={t(okButtonText)}
             icon={icon}
             className={className}
           />
         )}
         <Modal
-          title={title}
+          title={t(title)}
           open={visible}
           footer={footer}
           destroyOnClose

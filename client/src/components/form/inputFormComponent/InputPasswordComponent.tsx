@@ -10,14 +10,14 @@ type InputFormProps = {
   formClassName: string
   placeholder: string
 }
-function InputPasswordFormComponent({
+const InputPasswordFormComponent = ({
   name,
   rules = {},
   label,
   initialValue,
   placeholder,
   formClassName = 'antd_form',
-}: InputFormProps) {
+}: InputFormProps) => {
   const { t } = useTranslation()
   return (
     <Form.Item

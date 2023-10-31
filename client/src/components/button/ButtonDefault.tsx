@@ -21,19 +21,21 @@ const ButtonDefault: FC<ButtonDefaultProps> = ({
   loading,
   text,
   size = 'middle',
-  loading,
-}) => (
-  <Button
-    size={size}
-    key={2}
-    disabled={disabled}
-    loading={loading}
-    onClick={onClick}
-    className={className}
-  >
-    {icon}
-    {text}
-  </Button>
-)
+}) => {
+  const { t } = useTranslation()
+  return (
+    <Button
+      size={size}
+      key={2}
+      disabled={disabled}
+      loading={loading}
+      onClick={onClick}
+      className={className}
+    >
+      {icon}
+      {t(text)}
+    </Button>
+  )
+}
 
 export default ButtonDefault
