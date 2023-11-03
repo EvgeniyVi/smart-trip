@@ -42,3 +42,10 @@ export const UserModal = withModal(AuthForm, {
   title: 'Sign in',
   className: '',
 })
+
+export const ListTravelModal = withModal(AuthForm, {
+  okButtonText: 'Travellers',
+  disabled: false,
+  title: 'Travellers',
+  className: '',
+})
