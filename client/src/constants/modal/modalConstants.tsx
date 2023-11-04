@@ -1,6 +1,7 @@
 import withModal from '../../HOCs/withModal'
 import { AuthForm } from '../../pages/auth'
 import './style.scss'
+import ListTraveller from '../../pages/main/mainPage/components/searchBarComponent/components/ListTraveller'
 
 export const UserModal = withModal(AuthForm, {
   okButtonText: 'Sign in',
@@ -9,7 +10,7 @@ export const UserModal = withModal(AuthForm, {
   className: '',
 })
 
-export const ListTravelModal = withModal(AuthForm, {
+export const ListTravelModal = withModal(ListTraveller, {
   okButtonText: 'Travellers',
   disabled: false,
   classNameText: 'text-button',
