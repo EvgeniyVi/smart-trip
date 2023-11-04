@@ -3,8 +3,6 @@ import {
   englishLanguage,
   ukraineLanguage,
 } from '../locales/localeAntdComponent'
-import withModal from '../HOCs/withModal'
-import { AuthForm } from '../pages/auth'
 
 export const getNavigatorLanguage = () => {
   console.log(navigator)
@@ -35,17 +33,3 @@ export const localizationAntdComponent = (language: string) => {
       return null
   }
 }
-
-export const UserModal = withModal(AuthForm, {
-  okButtonText: 'Sign in',
-  disabled: false,
-  title: 'Sign in',
-  className: '',
-})
-
-export const ListTravelModal = withModal(AuthForm, {
-  okButtonText: 'Travellers',
-  disabled: false,
-  title: 'Travellers',
-  className: '',
-})

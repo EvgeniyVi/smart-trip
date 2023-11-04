@@ -1,5 +1,5 @@
-import { UserModal } from '../utils/helpers'
 import LanguageMenu from '../components/languageMenu/LanguageMenu'
+import { UserModal } from './modal/modalConstants'
 
 export const navMenu = [
   {
