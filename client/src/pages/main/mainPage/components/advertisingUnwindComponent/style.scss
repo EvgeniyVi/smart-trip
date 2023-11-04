@@ -2,9 +2,10 @@
 
 .unwind-block {
   display: flex;
+
   background: url('../../../../../media/Unwind.png');
   height: 500px;
-
+  position: relative;
   &__info-assessment {
     display: flex;
     height: 500px;
@@ -13,6 +14,8 @@
 
   &_display_flex {
     display: flex;
+    position: relative;
+
   }
 
   &__header {
@@ -23,6 +26,15 @@
     display: flex;
     justify-content: space-between;
     padding-top: 34px;
+  }
+
+  &__search-bar {
+
+    top: 440px;
+
+    position: absolute;
+
+
   }
 }
 

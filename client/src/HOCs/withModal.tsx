@@ -4,12 +4,13 @@ import { useTranslation } from 'react-i18next'
 import { ButtonDefault } from '../components/button/inxed'
 
 interface withAntdModalProps {
-  okButtonText?: string
+  okButtonText?: any
   footer?: string
   title?: string
   disabled: boolean
-  icon?: React.JSX.Element
+  icon?: any
   className: string
+  classNameText?: string
 }
 
 interface ComponentWithDialogProps {
@@ -24,6 +25,7 @@ function withModal(
     title = '',
     disabled,
     icon,
+    classNameText,
     className,
   }: withAntdModalProps
 ) {
@@ -40,7 +42,7 @@ function withModal(
           <ButtonDefault
             onClick={handleOpen}
             disabled={disabled}
-            text={t(okButtonText)}
+            text={<span className={classNameText}>{t(okButtonText)}</span>}
             icon={icon}
             className={className}
           />

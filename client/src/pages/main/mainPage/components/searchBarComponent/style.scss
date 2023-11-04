@@ -1,19 +1,94 @@
 .search-bar {
+
   &__wrapper {
     border-radius: 4px;
-
+    position: relative;
     display: flex;
+
     width: 1041px;
     height: 120px;
     padding: 33px 29.5px 33px 27.5px;
-
+    background-color: #fff;
     flex-shrink: 0;
     box-shadow: 0 12px 24px 0 rgba(39, 45, 77, 0.20), 0 1px 2px 0 rgba(30, 30, 32, 0.20);
   }
 
   &__item {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     gap: 8px;
   }
+
+  &__item-wrapper {
+
+    display: flex;
+    border-radius: 4px;
+    height: 54px;
+    padding: 8px 16px;
+    align-items: center;
+    gap: 8px;
+  }
+}
+
+.item-wrapper-container {
+  &_background_gray {
+    background: #EAEAEA;
+
+  }
+
+  &_background_purple {
+    background: #233D2C;
+  }
+}
+
+.item-autocomplete .ant-select-selector {
+  background-color: #EAEAEA !important;
+  width: 200px !important;
+  border-color: #EAEAEA !important;
+
+}
+
+.item-date-picker.ant-picker {
+  width: 110px !important;
+  background-color: #EAEAEA !important;
+  border-color: #EAEAEA !important;
+}
+
+.button-find-travel.ant-btn.ant-btn-default {
+  border: none;
+  width: 236px;
+  background: #233D2C;
+}
+
+.button-find-travel-text {
+  color: #FFF;
+  font-family: Poppins, serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28px;
+}
+
+.auto-complete-placeholder-wrapper {
+  display: flex;
+  align-items: center;
+
+  &__text {
+    color: #565656;
+    font-family: Poppins, serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px;
+    padding-left: 16px;
+  }
+}
+
+.date-picker-placeholder .ant-picker-input > input::placeholder {
+  color: #565656;
+  font-family: Poppins, serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28px;
 }

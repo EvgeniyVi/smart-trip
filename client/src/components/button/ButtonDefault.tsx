@@ -8,7 +8,7 @@ type ButtonDefaultProps = {
   className: string
   onClick: React.MouseEventHandler<HTMLButtonElement>
   icon: ReactNode
-  text: string
+  text: any
   size?: SizeType
   loading?: boolean
 }
@@ -33,7 +33,7 @@ const ButtonDefault: FC<ButtonDefaultProps> = ({
       className={className}
     >
       {icon}
-      {t(text)}
+      {text}
     </Button>
   )
 }

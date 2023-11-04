@@ -6,8 +6,6 @@ const MainPage = () => (
     <Header />
 
     <Unwind />
-
-    {/* <SearchBar /> */}
   </>
 )
 export default MainPage

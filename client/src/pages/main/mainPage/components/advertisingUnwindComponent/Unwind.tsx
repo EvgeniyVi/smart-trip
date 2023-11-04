@@ -2,6 +2,7 @@ import { useTranslation } from 'react-i18next'
 import { Users } from '../../../../../media'
 import './style.scss'
 import RateComponent from '../../../../../components/rate/RateComponent'
+import SearchBar from '../searchBarComponent/SearchBar'
 
 const Unwind = () => {
   const { t } = useTranslation()
@@ -26,6 +27,9 @@ const Unwind = () => {
               <RateComponent />
             </div>
           </div>
+        </div>
+        <div className="unwind-block__search-bar">
+          <SearchBar />
         </div>
       </div>
     </div>
