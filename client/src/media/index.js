@@ -5,5 +5,15 @@ import Assesment from './Assesment.png'
 import Unwind from './Unwind.png'
 import Users from './Users.png'
 import Tourists from './Tourists.png'
+import FirstCabins from './FirstCabins.png'
 
-export { Logo, Ukraine, England, Assesment, Unwind, Users, Tourists }
+export {
+  Logo,
+  Ukraine,
+  England,
+  Assesment,
+  Unwind,
+  Users,
+  Tourists,
+  FirstCabins,
+}
